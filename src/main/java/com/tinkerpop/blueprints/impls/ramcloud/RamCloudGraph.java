@@ -85,9 +85,11 @@ public class RamCloudGraph implements IndexableGraph, KeyIndexableGraph, Transac
   static {
     System.loadLibrary("edu_stanford_ramcloud_JRamCloud");
   }
+
+  private static final String DEFAULT_COORDINATOR_LOCATION = "fast+udp:host=127.0.0.1,port=12246";
   
   public RamCloudGraph() {
-    this("infrc:host=192.168.1.101,port=12246");
+    this(DEFAULT_COORDINATOR_LOCATION);
   }
   
   public RamCloudGraph(String coordinatorLocation) {
@@ -95,7 +97,7 @@ public class RamCloudGraph implements IndexableGraph, KeyIndexableGraph, Transac
   }
  
   public RamCloudGraph(Level logLevel) {
-    this("infrc:host=192.168.1.101,port=12246", logLevel);
+    this(DEFAULT_COORDINATOR_LOCATION, logLevel);
   }
  
   public RamCloudGraph(String coordinatorLocation, Level logLevel) {
