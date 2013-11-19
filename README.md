@@ -16,7 +16,7 @@ javah -cp ../../../ edu.stanford.ramcloud.JRamCloud
  - Compile the ramcloud C++ library (assuming ramcloud is in your ${HOME} directory and you have already compiled ramcloud):
 
 ```
-c++ -Wall -O3 -shared -fPIC -std=c++0x -I/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.9.x86_64/include/ -I/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.9.x86_64/include/linux/ -I${HOME}/ramcloud/src/ -I${HOME}/ramcloud/obj.master/ -I${HOME}/ramcloud/logcabin/ -I${HOME}/ramcloud/gtest/include/ -L${HOME}/ramcloud/obj.master -o libedu_stanford_ramcloud_JRamCloud.so edu_stanford_ramcloud_JRamCloud.cc -lramcloud
+c++ -Wall -O3 -shared -fPIC -std=c++0x -I/usr/lib/jvm/default-java/include/ -I/usr/lib/jvm/default-java/include/linux/ -I${HOME}/ramcloud/src/ -I${HOME}/ramcloud/obj.master/ -I${HOME}/ramcloud/logcabin/ -I${HOME}/ramcloud/gtest/include/ -L${HOME}/ramcloud/obj.master -o libedu_stanford_ramcloud_JRamCloud.so edu_stanford_ramcloud_JRamCloud.cc -lramcloud
 ```
 
  - Update `LD_LIBRARY_PATH` (assuming ramcloud is in your ${HOME} directory) to include the library and also any other ramcloud libraries:
