@@ -112,7 +112,7 @@ git clone https://github.com/tinkerpop/gremlin.git
  - Compile gremlin
 
 ```
-cd rexster/
+cd gremlin/
 mvn package
 ```
 
